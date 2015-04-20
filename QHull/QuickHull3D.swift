@@ -184,6 +184,107 @@ public class QuickHull3D
     */
     public init() {  }
 
+    
+    
+    
+    
+    /**
+    * Returns the vertex points in this hull.
+    *
+    * @return array of vertex points
+    * @see QuickHull3D#getVertices(double[])
+    * @see QuickHull3D#getFaces()
+    */
+    public func getVertices()-> [Point3d]
+    {
+        var vtxs =  [Point3d]()
+        for i in 0..<numVertices{
+            vtxs.append(pointBuffer[vertexPointIndices[i]].pnt);
+        }
+        return vtxs;
+    }
+
+    
+    
+    /**
+    * Returns the faces associated with this hull.
+    *
+    * <p>Each face is represented by an integer array which gives the
+    * indices of the vertices. These indices are numbered
+    * relative to the
+    * hull vertices, are zero-based,
+    * and are arranged counter-clockwise. More control
+    * over the index format can be obtained using
+    * {@link #getFaces(int) getFaces(indexFlags)}.
+    *
+    * @return array of integer arrays, giving the vertex
+    * indices for each face.
+    * @see QuickHull3D#getVertices()
+    * @see QuickHull3D#getFaces(int)
+    */
+    public func getFaces()->[[Int]]
+    {
+        return getFaces(0);
+    }
+    
+    
+    /**
+    * Returns the faces associated with this hull.
+    *
+    * <p>Each face is represented by an integer array which gives the
+    * indices of the vertices. By default, these indices are numbered with
+    * respect to the hull vertices (as opposed to the input points), are
+    * zero-based, and are arranged counter-clockwise. However, this
+    * can be changed by setting {@link #POINT_RELATIVE
+    * POINT_RELATIVE}, {@link #INDEXED_FROM_ONE INDEXED_FROM_ONE}, or
+    * {@link #CLOCKWISE CLOCKWISE} in the indexFlags parameter.
+    *
+    * @param indexFlags specifies index characteristics (0 results
+    * in the default)
+    * @return array of integer arrays, giving the vertex
+    * indices for each face.
+    * @see QuickHull3D#getVertices()
+    */
+    public func getFaces (indexFlags:Int)->[[Int]]{
+        var allFaces =  [[Int]]()
+        var k = 0;
+        for face in faces{
+        
+            allFaces.append([Int](count:face.numVertices(),repeatedValue:0));
+            getFaceIndices(&allFaces[k], face: face, flags: indexFlags);
+            k++;
+        }
+        return allFaces;
+    }
+    
+    public func normalOfFace(index:Int)->Vector3d{
+        return faces[index].getNormal()
+    }
+    
+    func getFaceIndices (inout indices:[Int],  face:Face,  flags:Int)
+    {
+        let ccw = ((flags & QuickHull3D.CLOCKWISE) == 0);
+        let indexedFromOne = ((flags & QuickHull3D.INDEXED_FROM_ONE) != 0);
+        let pointRelative = ((flags & QuickHull3D.POINT_RELATIVE) != 0);
+        
+        var hedge = face.he0;
+        var k = 0;
+        do
+        {
+            var idx = hedge.head().index;
+            if (pointRelative)
+            {
+                idx = vertexPointIndices[idx];
+            }
+            if (indexedFromOne)
+            {
+                idx++;
+            }
+            indices[k++] = idx;
+            hedge = (ccw ? hedge.next! : hedge.prev!);
+        }while (hedge !== face.he0);
+    }
+    
     /**
     * Creates a convex hull object and initializes it to the convex hull
     * of a set of points.
@@ -270,7 +371,10 @@ public class QuickHull3D
         }
     }
     
-    
+    public func build (points:[Point3d])
+    {
+        build(points,nump:points.count)
+    }
     /**
     * Constructs the convex hull of a set of points.
     *
@@ -819,5 +923,31 @@ public class QuickHull3D
     {
         return he.face.distanceToPlane (he.opposite!.face.getCentroid());
     }
+    
+    
+    /**
+    * Triangulates any non-triangular hull faces. In some cases, due to
+    * precision issues, the resulting triangles may be very thin or small,
+    * and hence appear to be non-convex (this same limitation is present
+    * in <a href=http://www.qhull.org>qhull</a>).
+    */
+    public func triangulate()
+    {
+        let minArea = 1000 * charLength * QuickHull3D.DOUBLE_PREC;
+        newFaces.clear();
+        
+        for face in faces{
+            if(face.mark == Face.VISIBLE)
+            {
+                face.triangulate(newFaces, minArea: minArea);
+
+            }
+        }
+        
+        for var face = newFaces.first(); face != nil; face = face!.next{
+            faces.append(face!);
+        }
+    }
+    
 }
     

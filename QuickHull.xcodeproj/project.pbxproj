@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465F9E581AE591EF0052A7DC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F9E571AE591EF0052A7DC /* Utils.swift */; };
+		465F9E5A1AE5971F0052A7DC /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F9E591AE5971F0052A7DC /* Vertex.swift */; };
+		465F9E5C1AE5975B0052A7DC /* MeshUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F9E5B1AE5975B0052A7DC /* MeshUtils.swift */; };
 		46FF1F2C1AE54AF8003C3FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F2B1AE54AF8003C3FFF /* AppDelegate.swift */; };
 		46FF1F2E1AE54AF8003C3FFF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F2D1AE54AF8003C3FFF /* GameView.swift */; };
 		46FF1F301AE54AF8003C3FFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F2F1AE54AF8003C3FFF /* GameViewController.swift */; };
@@ -28,6 +31,7 @@
 		46FF1F7E1AE54BF2003C3FFF /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F7D1AE54BF2003C3FFF /* Vertex.swift */; };
 		46FF1F801AE54BF9003C3FFF /* VertexList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F7F1AE54BF9003C3FFF /* VertexList.swift */; };
 		46FF1F821AE54FB8003C3FFF /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F811AE54FB8003C3FFF /* Random.swift */; };
+		46FF1F841AE58DA3003C3FFF /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F831AE58DA3003C3FFF /* Vector3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		465F9E571AE591EF0052A7DC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		465F9E591AE5971F0052A7DC /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		465F9E5B1AE5975B0052A7DC /* MeshUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeshUtils.swift; sourceTree = "<group>"; };
 		46FF1F261AE54AF8003C3FFF /* QuickHull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickHull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FF1F2A1AE54AF8003C3FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46FF1F2B1AE54AF8003C3FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +109,7 @@
 		46FF1F7D1AE54BF2003C3FFF /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		46FF1F7F1AE54BF9003C3FFF /* VertexList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexList.swift; sourceTree = "<group>"; };
 		46FF1F811AE54FB8003C3FFF /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		46FF1F831AE58DA3003C3FFF /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,10 @@
 				46FF1F2B1AE54AF8003C3FFF /* AppDelegate.swift */,
 				46FF1F2D1AE54AF8003C3FFF /* GameView.swift */,
 				46FF1F2F1AE54AF8003C3FFF /* GameViewController.swift */,
+				46FF1F831AE58DA3003C3FFF /* Vector3.swift */,
+				465F9E591AE5971F0052A7DC /* Vertex.swift */,
+				465F9E571AE591EF0052A7DC /* Utils.swift */,
+				465F9E5B1AE5975B0052A7DC /* MeshUtils.swift */,
 				46FF1F311AE54AF9003C3FFF /* art.scnassets */,
 				46FF1F331AE54AF9003C3FFF /* Images.xcassets */,
 				46FF1F351AE54AF9003C3FFF /* MainMenu.xib */,
@@ -415,9 +427,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465F9E581AE591EF0052A7DC /* Utils.swift in Sources */,
 				46FF1F2E1AE54AF8003C3FFF /* GameView.swift in Sources */,
+				46FF1F841AE58DA3003C3FFF /* Vector3.swift in Sources */,
 				46FF1F301AE54AF8003C3FFF /* GameViewController.swift in Sources */,
+				465F9E5C1AE5975B0052A7DC /* MeshUtils.swift in Sources */,
 				46FF1F2C1AE54AF8003C3FFF /* AppDelegate.swift in Sources */,
+				465F9E5A1AE5971F0052A7DC /* Vertex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
