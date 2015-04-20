@@ -14,6 +14,20 @@
 		46FF1F341AE54AF9003C3FFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46FF1F331AE54AF9003C3FFF /* Images.xcassets */; };
 		46FF1F371AE54AF9003C3FFF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FF1F351AE54AF9003C3FFF /* MainMenu.xib */; };
 		46FF1F431AE54AF9003C3FFF /* QuickHullTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F421AE54AF9003C3FFF /* QuickHullTests.swift */; };
+		46FF1F561AE54B8A003C3FFF /* QHull.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FF1F551AE54B8A003C3FFF /* QHull.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46FF1F5C1AE54B8A003C3FFF /* QHull.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FF1F511AE54B8A003C3FFF /* QHull.framework */; };
+		46FF1F651AE54B8A003C3FFF /* QHullTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F641AE54B8A003C3FFF /* QHullTests.swift */; };
+		46FF1F681AE54B8A003C3FFF /* QHull.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FF1F511AE54B8A003C3FFF /* QHull.framework */; };
+		46FF1F691AE54B8A003C3FFF /* QHull.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46FF1F511AE54B8A003C3FFF /* QHull.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46FF1F721AE54BBD003C3FFF /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F711AE54BBD003C3FFF /* Face.swift */; };
+		46FF1F741AE54BC5003C3FFF /* FaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F731AE54BC5003C3FFF /* FaceList.swift */; };
+		46FF1F761AE54BCC003C3FFF /* HalfEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F751AE54BCC003C3FFF /* HalfEdge.swift */; };
+		46FF1F781AE54BD5003C3FFF /* Point3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F771AE54BD5003C3FFF /* Point3d.swift */; };
+		46FF1F7A1AE54BE0003C3FFF /* QuickHull3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F791AE54BE0003C3FFF /* QuickHull3D.swift */; };
+		46FF1F7C1AE54BE8003C3FFF /* Vector3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F7B1AE54BE8003C3FFF /* Vector3d.swift */; };
+		46FF1F7E1AE54BF2003C3FFF /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F7D1AE54BF2003C3FFF /* Vertex.swift */; };
+		46FF1F801AE54BF9003C3FFF /* VertexList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F7F1AE54BF9003C3FFF /* VertexList.swift */; };
+		46FF1F821AE54FB8003C3FFF /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1F811AE54FB8003C3FFF /* Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +38,42 @@
 			remoteGlobalIDString = 46FF1F251AE54AF8003C3FFF;
 			remoteInfo = QuickHull;
 		};
+		46FF1F5D1AE54B8A003C3FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46FF1F1E1AE54AF8003C3FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46FF1F501AE54B8A003C3FFF;
+			remoteInfo = QHull;
+		};
+		46FF1F5F1AE54B8A003C3FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46FF1F1E1AE54AF8003C3FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46FF1F251AE54AF8003C3FFF;
+			remoteInfo = QuickHull;
+		};
+		46FF1F661AE54B8A003C3FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46FF1F1E1AE54AF8003C3FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46FF1F501AE54B8A003C3FFF;
+			remoteInfo = QHull;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46FF1F6D1AE54B8A003C3FFF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				46FF1F691AE54B8A003C3FFF /* QHull.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		46FF1F261AE54AF8003C3FFF /* QuickHull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickHull.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +87,21 @@
 		46FF1F3C1AE54AF9003C3FFF /* QuickHullTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickHullTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FF1F411AE54AF9003C3FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46FF1F421AE54AF9003C3FFF /* QuickHullTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickHullTests.swift; sourceTree = "<group>"; };
+		46FF1F511AE54B8A003C3FFF /* QHull.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QHull.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46FF1F541AE54B8A003C3FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46FF1F551AE54B8A003C3FFF /* QHull.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHull.h; sourceTree = "<group>"; };
+		46FF1F5B1AE54B8A003C3FFF /* QHullTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QHullTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46FF1F631AE54B8A003C3FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46FF1F641AE54B8A003C3FFF /* QHullTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QHullTests.swift; sourceTree = "<group>"; };
+		46FF1F711AE54BBD003C3FFF /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		46FF1F731AE54BC5003C3FFF /* FaceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceList.swift; sourceTree = "<group>"; };
+		46FF1F751AE54BCC003C3FFF /* HalfEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfEdge.swift; sourceTree = "<group>"; };
+		46FF1F771AE54BD5003C3FFF /* Point3d.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point3d.swift; sourceTree = "<group>"; };
+		46FF1F791AE54BE0003C3FFF /* QuickHull3D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickHull3D.swift; sourceTree = "<group>"; };
+		46FF1F7B1AE54BE8003C3FFF /* Vector3d.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3d.swift; sourceTree = "<group>"; };
+		46FF1F7D1AE54BF2003C3FFF /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		46FF1F7F1AE54BF9003C3FFF /* VertexList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexList.swift; sourceTree = "<group>"; };
+		46FF1F811AE54FB8003C3FFF /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FF1F681AE54B8A003C3FFF /* QHull.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +117,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FF1F4D1AE54B8A003C3FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FF1F581AE54B8A003C3FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FF1F5C1AE54B8A003C3FFF /* QHull.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +143,8 @@
 			children = (
 				46FF1F281AE54AF8003C3FFF /* QuickHull */,
 				46FF1F3F1AE54AF9003C3FFF /* QuickHullTests */,
+				46FF1F521AE54B8A003C3FFF /* QHull */,
+				46FF1F611AE54B8A003C3FFF /* QHullTests */,
 				46FF1F271AE54AF8003C3FFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +154,8 @@
 			children = (
 				46FF1F261AE54AF8003C3FFF /* QuickHull.app */,
 				46FF1F3C1AE54AF9003C3FFF /* QuickHullTests.xctest */,
+				46FF1F511AE54B8A003C3FFF /* QHull.framework */,
+				46FF1F5B1AE54B8A003C3FFF /* QHullTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +199,61 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		46FF1F521AE54B8A003C3FFF /* QHull */ = {
+			isa = PBXGroup;
+			children = (
+				46FF1F551AE54B8A003C3FFF /* QHull.h */,
+				46FF1F711AE54BBD003C3FFF /* Face.swift */,
+				46FF1F731AE54BC5003C3FFF /* FaceList.swift */,
+				46FF1F751AE54BCC003C3FFF /* HalfEdge.swift */,
+				46FF1F791AE54BE0003C3FFF /* QuickHull3D.swift */,
+				46FF1F7B1AE54BE8003C3FFF /* Vector3d.swift */,
+				46FF1F7D1AE54BF2003C3FFF /* Vertex.swift */,
+				46FF1F771AE54BD5003C3FFF /* Point3d.swift */,
+				46FF1F7F1AE54BF9003C3FFF /* VertexList.swift */,
+				46FF1F811AE54FB8003C3FFF /* Random.swift */,
+				46FF1F531AE54B8A003C3FFF /* Supporting Files */,
+			);
+			path = QHull;
+			sourceTree = "<group>";
+		};
+		46FF1F531AE54B8A003C3FFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46FF1F541AE54B8A003C3FFF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46FF1F611AE54B8A003C3FFF /* QHullTests */ = {
+			isa = PBXGroup;
+			children = (
+				46FF1F641AE54B8A003C3FFF /* QHullTests.swift */,
+				46FF1F621AE54B8A003C3FFF /* Supporting Files */,
+			);
+			path = QHullTests;
+			sourceTree = "<group>";
+		};
+		46FF1F621AE54B8A003C3FFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46FF1F631AE54B8A003C3FFF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		46FF1F4E1AE54B8A003C3FFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FF1F561AE54B8A003C3FFF /* QHull.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		46FF1F251AE54AF8003C3FFF /* QuickHull */ = {
@@ -125,10 +263,12 @@
 				46FF1F221AE54AF8003C3FFF /* Sources */,
 				46FF1F231AE54AF8003C3FFF /* Frameworks */,
 				46FF1F241AE54AF8003C3FFF /* Resources */,
+				46FF1F6D1AE54B8A003C3FFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46FF1F671AE54B8A003C3FFF /* PBXTargetDependency */,
 			);
 			name = QuickHull;
 			productName = QuickHull;
@@ -153,6 +293,43 @@
 			productReference = 46FF1F3C1AE54AF9003C3FFF /* QuickHullTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		46FF1F501AE54B8A003C3FFF /* QHull */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46FF1F6A1AE54B8A003C3FFF /* Build configuration list for PBXNativeTarget "QHull" */;
+			buildPhases = (
+				46FF1F4C1AE54B8A003C3FFF /* Sources */,
+				46FF1F4D1AE54B8A003C3FFF /* Frameworks */,
+				46FF1F4E1AE54B8A003C3FFF /* Headers */,
+				46FF1F4F1AE54B8A003C3FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QHull;
+			productName = QHull;
+			productReference = 46FF1F511AE54B8A003C3FFF /* QHull.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		46FF1F5A1AE54B8A003C3FFF /* QHullTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46FF1F6E1AE54B8A003C3FFF /* Build configuration list for PBXNativeTarget "QHullTests" */;
+			buildPhases = (
+				46FF1F571AE54B8A003C3FFF /* Sources */,
+				46FF1F581AE54B8A003C3FFF /* Frameworks */,
+				46FF1F591AE54B8A003C3FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46FF1F5E1AE54B8A003C3FFF /* PBXTargetDependency */,
+				46FF1F601AE54B8A003C3FFF /* PBXTargetDependency */,
+			);
+			name = QHullTests;
+			productName = QHullTests;
+			productReference = 46FF1F5B1AE54B8A003C3FFF /* QHullTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,6 +343,13 @@
 						CreatedOnToolsVersion = 6.3;
 					};
 					46FF1F3B1AE54AF9003C3FFF = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 46FF1F251AE54AF8003C3FFF;
+					};
+					46FF1F501AE54B8A003C3FFF = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					46FF1F5A1AE54B8A003C3FFF = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 46FF1F251AE54AF8003C3FFF;
 					};
@@ -186,6 +370,8 @@
 			targets = (
 				46FF1F251AE54AF8003C3FFF /* QuickHull */,
 				46FF1F3B1AE54AF9003C3FFF /* QuickHullTests */,
+				46FF1F501AE54B8A003C3FFF /* QHull */,
+				46FF1F5A1AE54B8A003C3FFF /* QHullTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +388,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		46FF1F3A1AE54AF9003C3FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FF1F4F1AE54B8A003C3FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FF1F591AE54B8A003C3FFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,6 +429,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46FF1F4C1AE54B8A003C3FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FF1F7A1AE54BE0003C3FFF /* QuickHull3D.swift in Sources */,
+				46FF1F741AE54BC5003C3FFF /* FaceList.swift in Sources */,
+				46FF1F781AE54BD5003C3FFF /* Point3d.swift in Sources */,
+				46FF1F7C1AE54BE8003C3FFF /* Vector3d.swift in Sources */,
+				46FF1F721AE54BBD003C3FFF /* Face.swift in Sources */,
+				46FF1F801AE54BF9003C3FFF /* VertexList.swift in Sources */,
+				46FF1F7E1AE54BF2003C3FFF /* Vertex.swift in Sources */,
+				46FF1F761AE54BCC003C3FFF /* HalfEdge.swift in Sources */,
+				46FF1F821AE54FB8003C3FFF /* Random.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FF1F571AE54B8A003C3FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FF1F651AE54B8A003C3FFF /* QHullTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -236,6 +460,21 @@
 			isa = PBXTargetDependency;
 			target = 46FF1F251AE54AF8003C3FFF /* QuickHull */;
 			targetProxy = 46FF1F3D1AE54AF9003C3FFF /* PBXContainerItemProxy */;
+		};
+		46FF1F5E1AE54B8A003C3FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46FF1F501AE54B8A003C3FFF /* QHull */;
+			targetProxy = 46FF1F5D1AE54B8A003C3FFF /* PBXContainerItemProxy */;
+		};
+		46FF1F601AE54B8A003C3FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46FF1F251AE54AF8003C3FFF /* QuickHull */;
+			targetProxy = 46FF1F5F1AE54B8A003C3FFF /* PBXContainerItemProxy */;
+		};
+		46FF1F671AE54B8A003C3FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46FF1F501AE54B8A003C3FFF /* QHull */;
+			targetProxy = 46FF1F661AE54B8A003C3FFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -389,6 +628,87 @@
 			};
 			name = Release;
 		};
+		46FF1F6B1AE54B8A003C3FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QHull/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46FF1F6C1AE54B8A003C3FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = QHull/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46FF1F6F1AE54B8A003C3FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QHullTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickHull.app/Contents/MacOS/QuickHull";
+			};
+			name = Debug;
+		};
+		46FF1F701AE54B8A003C3FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QHullTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickHull.app/Contents/MacOS/QuickHull";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -408,6 +728,7 @@
 				46FF1F481AE54AF9003C3FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46FF1F491AE54AF9003C3FFF /* Build configuration list for PBXNativeTarget "QuickHullTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +737,25 @@
 				46FF1F4B1AE54AF9003C3FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46FF1F6A1AE54B8A003C3FFF /* Build configuration list for PBXNativeTarget "QHull" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46FF1F6B1AE54B8A003C3FFF /* Debug */,
+				46FF1F6C1AE54B8A003C3FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46FF1F6E1AE54B8A003C3FFF /* Build configuration list for PBXNativeTarget "QHullTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46FF1F6F1AE54B8A003C3FFF /* Debug */,
+				46FF1F701AE54B8A003C3FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
